@@ -1,27 +1,23 @@
+" Preparation for the use Vundle
 set nocompatible
 filetype off
 
+" Start using Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
 Plugin 'flazz/vim-colorschemes'
-
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'scrooloose/nerdtree'
-
 Plugin 'majutsushi/tagbar'
-
-" Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 " Plugin 'fisadev/FixedTaskList.vim'
 " Plugin 'tpope/vim-surround'
-
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'MarcWeber/vim-addon-mw-utils'
 " Plugin 'tomtom/tlib_vim'
 " Plugin 'honza/vim-snippets'
-
 " Plugin 'klen/python-mode'
 " Plugin 'davidhalter/jedi-vim'
 " Plugin 'mitsuhiko/vim-jinja'
@@ -82,24 +78,22 @@ set visualbell t_vb=
 
 set t_Co=256
 set background=dark
-colorscheme solarized
-
 set guifont=Menlo_Regular:h18
+colorscheme solarized
 
 let mapleader = ','
 inoremap <C-c> <ESC>
-
 nnoremap <silent> <Space> :nohl<Bar>:echo<CR>
-
 nmap <leader>l :set list!<CR>
 
+map <F2> :NERDTreeToggle<CR>
 map <F6> :bp<CR>
 map <F7> :bn<CR>
 
-map <F2> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 map <C-t> :TagbarToggle<CR>
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let g:airline_theme='base16'
 
