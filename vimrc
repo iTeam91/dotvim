@@ -13,6 +13,8 @@ Plugin 'bling/vim-airline'
 Plugin 'fisadev/FixedTaskList.vim'
 
 call vundle#end()
+filetype on
+filetype plugin on
 filetype plugin indent on
 
 syntax enable
