@@ -10,6 +10,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
+Plugin 'fisadev/FixedTaskList.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -78,10 +79,16 @@ nnoremap <silent> <Space> :nohl<Bar>:echo<CR>
 map <F2> :NERDTreeToggle<CR>
 map <F6> :bp<CR>
 map <F7> :bn<CR>
-map <C-t> :TagbarToggle<CR>
+map <C-q> :bd<CR>
+map <F3> :TaskList<CR>
+map <F4> :TagbarToggle<CR>
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o$']
+
+let g:tagbar_autofocus = 0
 
 let g:airline_theme='base16'
 let g:airline#extensions#tabline#enabled = 1
