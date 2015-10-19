@@ -1,27 +1,15 @@
-" Preparation for the use Vundle
 set nocompatible
 filetype off
 
-" Start using Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'jlanzarotta/bufexplorer'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jlanzarotta/bufexplorer'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
-" Plugin 'fisadev/FixedTaskList.vim'
-" Plugin 'tpope/vim-surround'
-" Plugin 'garbas/vim-snipmate'
-" Plugin 'MarcWeber/vim-addon-mw-utils'
-" Plugin 'tomtom/tlib_vim'
-" Plugin 'honza/vim-snippets'
-" Plugin 'klen/python-mode'
-" Plugin 'davidhalter/jedi-vim'
-" Plugin 'mitsuhiko/vim-jinja'
-" Plugin 'mitsuhiko/vim-python-combined'
 
 call vundle#end()
 filetype plugin indent on
@@ -65,7 +53,7 @@ set backspace=indent,eol,start
 
 set history=1000
 set undolevels=1000
- 
+
 set showcmd
 
 set nobackup
@@ -81,19 +69,18 @@ set background=dark
 set guifont=Menlo_Regular:h18
 colorscheme solarized
 
-let mapleader = ','
 inoremap <C-c> <ESC>
-nnoremap <silent> <Space> :nohl<Bar>:echo<CR>
+let mapleader = ','
 nmap <leader>l :set list!<CR>
+nnoremap <silent> <Space> :nohl<Bar>:echo<CR>
 
 map <F2> :NERDTreeToggle<CR>
 map <F6> :bp<CR>
 map <F7> :bn<CR>
+map <C-t> :TagbarToggle<CR>
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-map <C-t> :TagbarToggle<CR>
 
 let g:airline_theme='base16'
 
