@@ -16,6 +16,7 @@ filetype plugin indent on
 
 syntax enable
 set paste
+set mousemodel=popup
 
 set encoding=utf8
 set termencoding=utf-8
@@ -83,4 +84,6 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 let g:airline_theme='base16'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
