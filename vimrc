@@ -13,8 +13,6 @@ Plugin 'bling/vim-airline'
 Plugin 'fisadev/FixedTaskList.vim'
 
 call vundle#end()
-filetype on
-filetype plugin on
 filetype plugin indent on
 
 syntax enable
@@ -86,7 +84,8 @@ map <F6> :bp<CR>
 map <F7> :bn<CR>
 
 map <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 0
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
 
 let g:airline_theme='base16'
 let g:airline#extensions#tabline#enabled = 1
