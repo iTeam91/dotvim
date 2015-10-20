@@ -18,6 +18,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
+Plugin 'klen/python-mode'
 
 call vundle#end()
 filetype plugin indent on
