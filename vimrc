@@ -13,6 +13,7 @@ Plugin 'bling/vim-airline'
 Plugin 'fisadev/FixedTaskList.vim'
 Plugin 'rosenfeld/conque-term'
 Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 filetype plugin indent on
