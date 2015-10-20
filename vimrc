@@ -11,6 +11,8 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'fisadev/FixedTaskList.vim'
+Plugin 'rosenfeld/conque-term'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 filetype plugin indent on
